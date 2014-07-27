@@ -12,14 +12,14 @@
 NEI <- readRDS("data/summarySCC_PM25.rds")
 SCC <- readRDS("data/Source_Classification_Code.rds")
 
-#subset to select Baltimore City, Maryland
+#@SUBSET DATA
+#only Baltimore City, Maryland
 baltimore_pm <- NEI[NEI$fips=="24510",]
 
 #group by year and type
 baltimore_pm_y_t <- aggregate(Emissions ~ year + type, data=baltimore_pm, FUN=sum)
 
 #@PLOT DATA
-
 library(ggplot2)
 
 png(

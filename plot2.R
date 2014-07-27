@@ -12,7 +12,8 @@
 NEI <- readRDS("data/summarySCC_PM25.rds")
 SCC <- readRDS("data/Source_Classification_Code.rds")
 
-#subset to select Baltimore City, Maryland
+#@SUBSET DATA
+#only Baltimore City, Maryland
 baltimore_pm <- NEI[NEI$fips=="24510",]
 
 #group by year
@@ -27,9 +28,10 @@ png(
 
 with(baltimore_pm_year,{
   plot(
-    main=expression('Total Emissions (PM'[2.5]*') in Baltimore City, Maryland from 1999 to 2008'),
+    main=expression('Total Emissions (PM'[2.5]*') in Baltimore City, Maryland'),
     year,
     Emissions,
+    type = "h",
     xlab = "Years",
     lwd=10,
     ylab = expression('Total Emissions (PM'[2.5]*') ')

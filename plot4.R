@@ -13,9 +13,7 @@
 NEI <- readRDS("data/summarySCC_PM25.rds")
 SCC <- readRDS("data/Source_Classification_Code.rds")
 
-
 #@SUBSET DATA
-
 #create list of coal sources
 coal_sources <- SCC[grepl("Fuel Comb.*Coal", SCC$EI.Sector),]
 
@@ -26,7 +24,6 @@ emissions <- NEI[(NEI$SCC %in% coal_sources$SCC), ]
 emissions_year <- aggregate(Emissions ~ year, data=emissions, FUN=sum)
 
 #@PLOT DATA
-
 library(ggplot2)
 
 png(
