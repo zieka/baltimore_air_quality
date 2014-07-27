@@ -36,7 +36,7 @@ geom_point(stat="identity", size=4) +
 geom_smooth(method = "lm", se=F) +
 facet_grid(. ~ type) +
 xlab("Years") +
-ylab(expression('Total Emissions (PM'[2.5]*') ')) +
-ggtitle(expression('Total Emissions (PM'[2.5]*') in Baltimore City, Maryland by Source Type'))
+ylab(expression('Total Emissions (tons of PM'[2.5]*') ')) +
+ggtitle(expression('Total Emissions (tons of PM'[2.5]*') in Baltimore City, Maryland by Source Type (1999-2008)'))
 
 dev.off()

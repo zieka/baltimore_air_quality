@@ -45,7 +45,7 @@ facet_grid(. ~ Location,) +
 geom_point(stat="identity", size=4) +
 geom_smooth(method = "lm", se=F) +
 xlab("Years") +
-ylab(expression('Total Emissions (PM'[2.5]*') ')) +
-ggtitle(expression('Total Emissions (PM'[2.5]*') From Motor Vehicle Sources in Balitmore and LA (1999 -2008)'))
+ylab(expression('Total Emissions (tons of PM'[2.5]*') ')) +
+ggtitle(expression('Total Emissions (tons of PM'[2.5]*') From Motor Vehicle Sources in Balitmore and LA (1999-2008)'))
 
 dev.off()

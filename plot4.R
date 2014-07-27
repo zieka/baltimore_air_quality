@@ -29,7 +29,7 @@ library(ggplot2)
 png(
 	"plot4.png",
 	height=480,
-	width=480
+	width=680
 )
 
 ggplot(
@@ -39,7 +39,7 @@ ggplot(
 geom_point(stat="identity", size=4) +
 geom_smooth(method = "lm", se=F, colour="red") +
 xlab("Years") +
-ylab(expression('Total Emissions (PM'[2.5]*') ')) +
-ggtitle(expression('Total Emissions (PM'[2.5]*') in the US From Coal-Combustion Sources'))
+ylab(expression('Total Emissions (tons of PM'[2.5]*') ')) +
+ggtitle(expression('Total Emissions (tons of PM'[2.5]*') in the USA From Coal-Combustion Sources (1999-2008)'))
 
 dev.off()

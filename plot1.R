@@ -25,12 +25,12 @@ png(
 
 with(total_pm,{
   plot(
-    main=expression('Total Emissions (PM'[2.5]*') in the United States from 1999 to 2008'),
+    main=expression('Total Emissions (tons of PM'[2.5]*') in the USA (1999-2008)'),
     year,
     Emissions,
     xlab = "Years",
     lwd=10,
-    ylab = expression('Total Emissions (PM'[2.5]*') ')
+    ylab = expression('Total Emissions (tons of PM'[2.5]*') ')
   )
 	fit <- lm(total_pm$Emissions ~ total_pm$year)
 	abline(

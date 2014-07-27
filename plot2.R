@@ -22,19 +22,18 @@ baltimore_pm_year <- aggregate(Emissions ~ year, baltimore_pm, sum)
 #@PLOT DATA
 png(
 	"plot2.png",
-	width = 480,
+	width = 580,
 	height = 480
 )
 
 with(baltimore_pm_year,{
   plot(
-    main=expression('Total Emissions (PM'[2.5]*') in Baltimore City, Maryland'),
+    main=expression('Total Emissions (tons of PM'[2.5]*') in Baltimore City, Maryland (1999-2008)'),
     year,
     Emissions,
-    type = "h",
     xlab = "Years",
     lwd=10,
-    ylab = expression('Total Emissions (PM'[2.5]*') ')
+    ylab = expression('Total Emissions (tons of PM'[2.5]*') ')
   )
 	fit <- lm(baltimore_pm_year$Emissions ~ baltimore_pm_year$year)
 	abline(
