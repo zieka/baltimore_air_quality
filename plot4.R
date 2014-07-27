@@ -17,7 +17,7 @@ SCC <- readRDS("data/Source_Classification_Code.rds")
 #create list of coal sources
 coal_sources <- SCC[grepl("Fuel Comb.*Coal", SCC$EI.Sector),]
 
-#subset data to contain only coal sources
+#only coal sources
 emissions <- NEI[(NEI$SCC %in% coal_sources$SCC), ]
 
 #group by year
