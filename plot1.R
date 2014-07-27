@@ -28,7 +28,6 @@ with(total_pm,{
     main=expression('Total Emissions (PM'[2.5]*') in the United States from 1999 to 2008'),
     year,
     Emissions,
-    type = "h",
     xlab = "Years",
     lwd=10,
     ylab = expression('Total Emissions (PM'[2.5]*') ')

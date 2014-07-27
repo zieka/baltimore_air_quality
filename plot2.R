@@ -27,10 +27,9 @@ png(
 
 with(baltimore_pm_year,{
   plot(
-    main=expression('Total Emissions (PM'[2.5]*') in Baltimore City, Maryland'),
+    main=expression('Total Emissions (PM'[2.5]*') in Baltimore City, Maryland from 1999 to 2008'),
     year,
     Emissions,
-    type = "h",
     xlab = "Years",
     lwd=10,
     ylab = expression('Total Emissions (PM'[2.5]*') ')
